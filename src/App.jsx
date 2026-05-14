@@ -158,8 +158,8 @@ export default function RBMRegistrations() {
           YPO MENA <strong style={{ fontWeight: 700 }}>RBM Registrations</strong>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, color: "#fff", fontSize: 11, textAlign: "right", lineHeight: 1.3 }}>
-          <img src={YPO_LOGO} alt="YPO Logo" style={{ height: 46, width: "auto" }} />
-          <div>Middle East /<br />North Africa Region</div>
+          <img src={YPO_LOGO} alt="YPO Logo" style={{ height: 46, width: "auto", mixBlendMode: "screen" }} />
+          
         </div>
       </div>
 
