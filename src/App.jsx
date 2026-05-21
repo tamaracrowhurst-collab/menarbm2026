@@ -69,6 +69,8 @@ const REGISTRANTS = [
   { name: "Lauren Aird",               chapter: "Other*",                               role: "MA" },
   { name: "Paige Morgan",              chapter: "Other*",                               role: "MA" },
   { name: "Tamara Crowhurst",          chapter: "Other*",                               role: "MA" },
+  { name: "Hachem Ghandour",           chapter: "YPO Emirates Integrated",              role: "REX" },
+  { name: "Mostafa Bedair",            chapter: "YPO Cairo Integrated",                 role: "CC" },
 ];
 
 const ROLE_LABELS = {
@@ -87,7 +89,8 @@ const ROLE_COLORS = {
   REX: { bg: "#6A1B9A", text: "#fff" },
   FO:  { bg: "#E65100", text: "#fff" },
   YNG: { bg: "#00838F", text: "#fff" },
-  MA:  { bg: "#555", text: "#fff" },
+  MA:  { bg: "#555555", text: "#fff" },
+  SP:  { bg: "#AD1457", text: "#fff" },
 };
 
 function Badge({ name, role }) {
@@ -198,13 +201,18 @@ export default function RBMRegistrations() {
             <th style={{
               background: NAVY, color: "#fff", padding: "8px 16px",
               textAlign: "left", fontSize: 11, fontWeight: 600,
-              borderRight: "1px solid rgba(255,255,255,0.15)", width: "36%",
+              borderRight: "1px solid rgba(255,255,255,0.15)", width: "34%",
             }}>Chapter</th>
             <th style={{
               background: NAVY, color: "#fff", padding: "8px 16px",
               textAlign: "left", fontSize: 11, fontWeight: 600,
               borderRight: "1px solid rgba(255,255,255,0.15)",
             }}>Registrants</th>
+            <th style={{
+              background: NAVY, color: "#fff", padding: "8px 16px",
+              textAlign: "center", fontSize: 11, fontWeight: 600,
+              borderRight: "1px solid rgba(255,255,255,0.15)", width: "8%",
+            }}>SP</th>
             <th style={{
               background: ORANGE, color: "#fff", padding: "8px 16px",
               textAlign: "center", fontSize: 11, fontWeight: 600, width: "7%",
@@ -214,6 +222,8 @@ export default function RBMRegistrations() {
         <tbody>
           {CHAPTERS.map((ch, i) => {
             const people = dataByChapter[ch];
+            const members = people.filter(p => p.role !== "SP");
+            const spouses = people.filter(p => p.role === "SP");
             const total = people.length;
             return (
               <tr key={ch} style={{ background: i % 2 === 0 ? "#fff" : "#f7f8fa" }}>
@@ -223,9 +233,20 @@ export default function RBMRegistrations() {
                   fontWeight: 500, fontSize: 12, color: "#1a1a1a",
                 }}>{ch}</td>
                 <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8" }}>
-                  {total > 0 ? (
+                  {members.length > 0 ? (
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
-                      {people.map((p, j) => (
+                      {members.map((p, j) => (
+                        <Badge key={j} name={p.name} role={p.role} />
+                      ))}
+                    </div>
+                  ) : (
+                    <span style={{ color: "#ccc" }}>—</span>
+                  )}
+                </td>
+                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", textAlign: "center", borderRight: "1px solid #e8e8e8" }}>
+                  {spouses.length > 0 ? (
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 5, justifyContent: "center" }}>
+                      {spouses.map((p, j) => (
                         <Badge key={j} name={p.name} role={p.role} />
                       ))}
                     </div>
@@ -247,10 +268,11 @@ export default function RBMRegistrations() {
 
           {/* Grand Total row */}
           <tr>
-            <td style={{ background: NAVY, color: "#fff", fontWeight: 700, fontSize: 13, padding: "9px 16px" }}>
-              Grand Total
+            <td style={{ background: NAVY, color: "#fff", fontWeight: 700, fontSize: 13, padding: "9px 16px" }}>Grand Total</td>
+            <td style={{ background: ORANGE }} />
+            <td style={{ background: ORANGE, color: "#fff", fontWeight: 700, fontSize: 13, padding: "9px 16px", textAlign: "center" }}>
+              {REGISTRANTS.filter(r => r.role === "SP").length}
             </td>
-            <td style={{ background: ORANGE, color: "#fff", padding: "9px 16px" }} />
             <td style={{ background: ORANGE, color: "#fff", fontWeight: 700, fontSize: 13, padding: "9px 16px", textAlign: "center" }}>
               {grandTotal}
             </td>
