@@ -71,6 +71,16 @@ const REGISTRANTS = [
   { name: "Tamara Crowhurst",          chapter: "Other*",                               role: "MA" },
 ];
 
+const ROLE_LABELS = {
+  CC:  "Chapter Chair Elect",
+  RC:  "Regional Chair",
+  REX: "Regional Officer",
+  FO:  "Forum Officer Elect",
+  YNG: "YNG",
+  MA:  "YPO Mgmt Associate",
+  SP:  "Spouse / Partner",
+};
+
 const ROLE_COLORS = {
   CC:  { bg: "#2E7D32", text: "#fff" },
   RC:  { bg: "#1565C0", text: "#fff" },
