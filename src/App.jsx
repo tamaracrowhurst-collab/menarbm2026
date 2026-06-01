@@ -38,42 +38,44 @@ const CHAPTERS = [
 ];
 
 const REGISTRANTS = [
-  { name: "Sabina Hadi",               chapter: "YPO Dubai Downtown Integrated",      role: "REX" },
-  { name: "Mohamed Al Harthy",         chapter: "YPO Oman Integrated",                role: "CC" },
-  { name: "Jana Yamani",               chapter: "YPO Saudi",                          role: "REX" },
-  { name: "Hachem Ghandour",           chapter: "YPO Emirates Integrated",            role: "REX" },
-  { name: "Mostafa Bedair",            chapter: "YPO Cairo Integrated",               role: "CC" },
-  { name: "Nissa Bukhari",             chapter: "YPO Capital Pakistan Integrated",    role: "SP" },
-  { name: "Neeta Raj Gandhi",          chapter: "Other*",                             role: "MA" },
-  { name: "Lauren Aird",               chapter: "Other*",                             role: "MA" },
-  { name: "Paige Morgan",              chapter: "Other*",                             role: "MA" },
-  { name: "Bilal Shahid Ansari",       chapter: "YPO Capital Pakistan Integrated",    role: "CC" },
-  { name: "Nishant Vora",              chapter: "YPO Mena One Regional Integrated",   role: "CC" },
-  { name: "Ali Alam Qamar",            chapter: "YPO Indus Integrated",               role: "FO" },
-  { name: "Mark Troy",                 chapter: "YPO Dubai Integrated",               role: "REX" },
-  { name: "Owais Lakhani",             chapter: "YPO Pakistan",                       role: "CC" },
-  { name: "Junaid Al Said",            chapter: "YPO Oman Integrated",                role: "YNG" },
-  { name: "Atheeqe Ansari",            chapter: "YPO Dubai Downtown Integrated",      role: "CC" },
-  { name: "Mazhar Nasir",              chapter: "YPO Gold Pakistan",                  role: "CC" },
-  { name: "Abdulaziz Al-Othman",       chapter: "YPO Saudi",                          role: "CC" },
-  { name: "Bashar Hussein",            chapter: "YPO Palestine Integrated",           role: "CC" },
-  { name: "Shivani Arora",             chapter: "YPO Dubai Downtown Integrated",      role: "REX" },
-  { name: "Inam Qureshi",              chapter: "YPO MENA Gulf Regional Integrated",  role: "CC" },
-  { name: "Nishant Sahney",            chapter: "YPO Olive MENA Regional Integrated", role: "CC" },
-  { name: "Jad Ellawn",                chapter: "YPO Dubai Integrated",               role: "CC" },
-  { name: "Cynthia Haddad Abou Khater", chapter: "YPO Lebanon",                      role: "CC" },
-  { name: "Tahar Ktari",               chapter: "YPO Tunisia Integrated",             role: "CC" },
-  { name: "Shamsh Hadi",               chapter: "YPO Dubai Downtown Integrated",      role: "SP" },
-  { name: "Elias Chabtini",            chapter: "YPO Emirates Integrated",            role: "RC" },
-  { name: "Katrina Mankani",           chapter: "YPO Dubai Integrated",               role: "CC" },
-  { name: "Abather Al Juboori",        chapter: "YPO Iraq Integrated",                role: "CC" },
-  { name: "Moodi Ali Shah Bukhari",    chapter: "YPO Capital Pakistan Integrated",    role: "RC" },
-  { name: "Adriana Usvat",             chapter: "YPO UAE Integrated",                 role: "CC" },
-  { name: "Sarah Abudawood",           chapter: "YPO Khaleej Integrated",             role: "REX" },
-  { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                        role: "REX" },
-  { name: "Harvinder Sahni",           chapter: "YPO Kuwait Integrated",              role: "CC" },
-  { name: "Tamara Crowhurst",          chapter: "Other*",                             role: "MA" },
-  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",              role: "RC" },
+  { name: "Maria Luz Domingo",          chapter: "Other*",                              role: "MA" },
+  { name: "Nuha Abujaber",              chapter: "YPO Jordan Integrated",               role: "CC" },
+  { name: "Sabina Hadi",                chapter: "YPO Dubai Downtown Integrated",       role: "REX" },
+  { name: "Mohamed Al Harthy",          chapter: "YPO Oman Integrated",                 role: "CC" },
+  { name: "Jana Yamani",                chapter: "YPO Saudi",                           role: "REX" },
+  { name: "Hachem Ghandour",            chapter: "YPO Emirates Integrated",             role: "REX" },
+  { name: "Mostafa Bedair",             chapter: "YPO Cairo Integrated",                role: "CC" },
+  { name: "Nissa Bukhari",              chapter: "YPO Capital Pakistan Integrated",     role: "SP" },
+  { name: "Neeta Raj Gandhi",           chapter: "Other*",                              role: "MA" },
+  { name: "Lauren Aird",                chapter: "Other*",                              role: "MA" },
+  { name: "Paige Morgan",               chapter: "Other*",                              role: "MA" },
+  { name: "Bilal Shahid Ansari",        chapter: "YPO Capital Pakistan Integrated",     role: "CC" },
+  { name: "Nishant Vora",               chapter: "YPO Mena One Regional Integrated",    role: "CC" },
+  { name: "Ali Alam Qamar",             chapter: "YPO Indus Integrated",                role: "FO" },
+  { name: "Mark Troy",                  chapter: "YPO Dubai Integrated",                role: "REX" },
+  { name: "Owais Lakhani",              chapter: "YPO Pakistan",                        role: "CC" },
+  { name: "Junaid Al Said",             chapter: "YPO Oman Integrated",                 role: "YNG" },
+  { name: "Atheeqe Ansari",             chapter: "YPO Dubai Downtown Integrated",       role: "CC" },
+  { name: "Mazhar Nasir",               chapter: "YPO Gold Pakistan",                   role: "CC" },
+  { name: "Abdulaziz Al-Othman",        chapter: "YPO Saudi",                           role: "CC" },
+  { name: "Bashar Hussein",             chapter: "YPO Palestine Integrated",            role: "CC" },
+  { name: "Shivani Arora",              chapter: "YPO Dubai Downtown Integrated",       role: "REX" },
+  { name: "Inam Qureshi",               chapter: "YPO MENA Gulf Regional Integrated",   role: "CC" },
+  { name: "Nishant Sahney",             chapter: "YPO Olive MENA Regional Integrated",  role: "CC" },
+  { name: "Jad Ellawn",                 chapter: "YPO Dubai Integrated",                role: "CC" },
+  { name: "Cynthia Haddad Abou Khater", chapter: "YPO Lebanon",                        role: "CC" },
+  { name: "Tahar Ktari",                chapter: "YPO Tunisia Integrated",              role: "CC" },
+  { name: "Shamsh Hadi",                chapter: "YPO Dubai Downtown Integrated",       role: "SP" },
+  { name: "Elias Chabtini",             chapter: "YPO Emirates Integrated",             role: "RC" },
+  { name: "Katrina Mankani",            chapter: "YPO Dubai Integrated",                role: "CC" },
+  { name: "Abather Al Juboori",         chapter: "YPO Iraq Integrated",                 role: "CC" },
+  { name: "Moodi Ali Shah Bukhari",     chapter: "YPO Capital Pakistan Integrated",     role: "RC" },
+  { name: "Adriana Usvat",              chapter: "YPO UAE Integrated",                  role: "CC" },
+  { name: "Sarah Abudawood",            chapter: "YPO Khaleej Integrated",              role: "REX" },
+  { name: "Dayala Dagher Hayeck",       chapter: "YPO Lebanon",                         role: "REX" },
+  { name: "Harvinder Sahni",            chapter: "YPO Kuwait Integrated",               role: "CC" },
+  { name: "Tamara Crowhurst",           chapter: "Other*",                              role: "MA" },
+  { name: "Helen Bannayan",             chapter: "YPO Jordan Integrated",               role: "RC" },
 ];
 
 const ROLE_LABELS = {
@@ -84,7 +86,6 @@ const ROLE_LABELS = {
   YNG: "YNG",
   MA:  "YPO Mgmt Associate",
   SP:  "Spouse / Partner",
-  MEO: "Member Engagement Officer",
 };
 
 const ROLE_COLORS = {
@@ -95,7 +96,6 @@ const ROLE_COLORS = {
   YNG: { bg: "#00838F", text: "#fff" },
   MA:  { bg: "#555555", text: "#fff" },
   SP:  { bg: "#AD1457", text: "#fff" },
-  MEO: { bg: "#00695C", text: "#fff" },
 };
 
 function Badge({ name, role }) {
@@ -163,13 +163,6 @@ export default function RBMRegistrations() {
   REGISTRANTS.forEach(r => {
     if (dataByChapter[r.chapter]) dataByChapter[r.chapter].push(r);
   });
-  CHAPTERS.forEach(ch => {
-    dataByChapter[ch].sort((a, b) => {
-      const ai = ROLE_ORDER.indexOf(a.role) === -1 ? 99 : ROLE_ORDER.indexOf(a.role);
-      const bi = ROLE_ORDER.indexOf(b.role) === -1 ? 99 : ROLE_ORDER.indexOf(b.role);
-      return ai - bi;
-    });
-  });
 
   const grandTotal = REGISTRANTS.length;
 
@@ -204,7 +197,7 @@ export default function RBMRegistrations() {
       </div>
       {/* Date bar */}
       <div style={{ background: "#f0f2f5", padding: "6px 24px", fontSize: 11, color: "#444" }}>
-        Data accurate as of <strong style={{ color: ORANGE }}>25/05/2026</strong>
+        Data accurate as of <strong style={{ color: ORANGE }}>01/06/2026</strong>
       </div>
 
       {/* Table */}
