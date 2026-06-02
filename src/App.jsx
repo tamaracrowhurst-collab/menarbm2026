@@ -342,8 +342,8 @@ export default function RBMRegistrations() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
           <thead>
             <tr>
-              <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "left", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "30%" }}>Name</th>
               <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "left", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "28%" }}>Chapter</th>
+              <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "left", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "28%" }}>Name</th>
               <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "10%" }}>Role</th>
               <th style={{ background: ORANGE, color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "12%" }}>Check-in</th>
               <th style={{ background: ORANGE, color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "12%" }}>Check-out</th>
@@ -351,10 +351,10 @@ export default function RBMRegistrations() {
             </tr>
           </thead>
           <tbody>
-            {REGISTRANTS.filter(p => p.role !== "MA" && p.name !== "Nissa Bukhari" && p.name !== "Shamsh Hadi" && (selectedChapter === "All" || p.chapter === selectedChapter)).map((p, i) => (
+            {[...REGISTRANTS.filter(p => p.role !== "MA" && p.name !== "Nissa Bukhari" && p.name !== "Shamsh Hadi" && (selectedChapter === "All" || p.chapter === selectedChapter))].sort((a, b) => a.chapter.localeCompare(b.chapter) || a.name.localeCompare(b.name)).map((p, i) => (
               <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#f7f8fa" }}>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", fontWeight: 500, color: "#1a1a1a" }}>{p.name}</td>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", color: "#444" }}>{p.chapter}</td>
+                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", fontWeight: 500, color: "#1a1a1a" }}>{p.chapter}</td>
+                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", color: "#444" }}>{p.name}</td>
                 <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", textAlign: "center" }}>
                   <span style={{ background: ROLE_COLORS[p.role]?.bg || "#555", color: "#fff", borderRadius: 3, padding: "2px 7px", fontSize: 11, fontWeight: 700 }}>{p.role}</span>
                 </td>
