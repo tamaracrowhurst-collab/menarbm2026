@@ -169,6 +169,13 @@ export default function RBMRegistrations() {
   REGISTRANTS.forEach(r => {
     if (dataByChapter[r.chapter]) dataByChapter[r.chapter].push(r);
   });
+  CHAPTERS.forEach(ch => {
+    dataByChapter[ch].sort((a, b) => {
+      const ai = ROLE_ORDER.indexOf(a.role) === -1 ? 99 : ROLE_ORDER.indexOf(a.role);
+      const bi = ROLE_ORDER.indexOf(b.role) === -1 ? 99 : ROLE_ORDER.indexOf(b.role);
+      return ai - bi;
+    });
+  });
 
   const grandTotal = REGISTRANTS.length;
 
