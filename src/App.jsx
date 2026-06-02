@@ -162,6 +162,7 @@ function Badge({ name, role }) {
 
 export default function RBMRegistrations() {
   const [activeTab, setActiveTab] = useState("registrations");
+  const [selectedChapter, setSelectedChapter] = useState("All");
   const ROLE_ORDER = ["CC", "RC", "REX", "FO", "MEO", "YNG", "MA"];
   const dataByChapter = {};
   CHAPTERS.forEach(ch => dataByChapter[ch] = []);
@@ -313,6 +314,31 @@ export default function RBMRegistrations() {
 
       {/* Check-in / Check-out Tab */}
       {activeTab === "checkin" && (
+        <div>
+        <div style={{ padding: "10px 24px", background: "#f0f2f5", display: "flex", alignItems: "center", gap: 10 }}>
+          <span style={{ fontSize: 11, color: "#444", fontWeight: 600 }}>Filter by Chapter:</span>
+          <select
+            value={selectedChapter}
+            onChange={e => setSelectedChapter(e.target.value)}
+            style={{
+              fontSize: 11, padding: "5px 10px", borderRadius: 4,
+              border: "1px solid #ccc", background: "#fff", color: "#1a1a1a",
+              cursor: "pointer", fontFamily: "Arial, sans-serif",
+            }}
+          >
+            <option value="All">All Chapters</option>
+            {[...new Set(REGISTRANTS.filter(p => p.role !== "MA" && p.name !== "Nissa Bukhari" && p.name !== "Shamsh Hadi").map(p => p.chapter))].sort().map(ch => (
+              <option key={ch} value={ch}>{ch}</option>
+            ))}
+          </select>
+          {selectedChapter !== "All" && (
+            <button onClick={() => setSelectedChapter("All")} style={{
+              fontSize: 11, padding: "5px 10px", borderRadius: 4,
+              border: "1px solid #ccc", background: "#fff", color: "#666",
+              cursor: "pointer", fontFamily: "Arial, sans-serif",
+            }}>✕ Clear</button>
+          )}
+        </div>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
           <thead>
             <tr>
@@ -325,7 +351,7 @@ export default function RBMRegistrations() {
             </tr>
           </thead>
           <tbody>
-            {REGISTRANTS.filter(p => p.role !== "MA" && p.name !== "Nissa Bukhari" && p.name !== "Shamsh Hadi").map((p, i) => (
+            {REGISTRANTS.filter(p => p.role !== "MA" && p.name !== "Nissa Bukhari" && p.name !== "Shamsh Hadi" && (selectedChapter === "All" || p.chapter === selectedChapter)).map((p, i) => (
               <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#f7f8fa" }}>
                 <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", fontWeight: 500, color: "#1a1a1a" }}>{p.name}</td>
                 <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", color: "#444" }}>{p.chapter}</td>
@@ -347,6 +373,7 @@ export default function RBMRegistrations() {
             ))}
           </tbody>
         </table>
+        </div>
       )}
 
       <div style={{ fontSize: 11, color: "#666", padding: "7px 24px", borderTop: "1px solid #e0e0e0" }}>
