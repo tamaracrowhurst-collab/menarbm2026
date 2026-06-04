@@ -38,6 +38,10 @@ const CHAPTERS = [
 ];
 
 const REGISTRANTS = [
+  { name: "Amirah Ellahi Chaudhry",    chapter: "YPO Indus Integrated",                role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
+  { name: "Paul Abou Khater",          chapter: "YPO Lebanon",                         role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
+  { name: "Abdulrahman Tarabzouni",    chapter: "YPO Saudi",                           role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
+  { name: "Hari Chereddi",             chapter: "YPO MENA Gulf Regional Integrated",   role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Amit Gandhi",               chapter: "YPO Emirates Integrated",             role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Zaid Midani",               chapter: "YPO Levant Integrated",               role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Sharjeel Azhar",            chapter: "YPO Bahrain Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
@@ -56,31 +60,31 @@ const REGISTRANTS = [
   { name: "Paige Morgan",              chapter: "Other*",                              role: "MA",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Bilal Shahid Ansari",       chapter: "YPO Capital Pakistan Integrated",     role: "CC",  checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Nishant Vora",              chapter: "YPO Mena One Regional Integrated",    role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Ali Alam Qamar",            chapter: "YPO Indus Integrated",                role: "FO",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "EK109",  departureFlight: "TBC",     arrivalTime: "10:40", departureTime: "18:00" },
+  { name: "Ali Alam Qamar",            chapter: "YPO Indus Integrated",                role: "FO",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "EK109",  departureFlight: "TBC",    arrivalTime: "10:40", departureTime: "18:00" },
   { name: "Mark Troy",                 chapter: "YPO Dubai Integrated",                role: "REX", checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Owais Lakhani",             chapter: "YPO Pakistan",                        role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Junaid Al Said",            chapter: "YPO Oman Integrated",                 role: "YNG", checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Atheeqe Ansari",            chapter: "YPO Dubai Downtown Integrated",       role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK0109", departureFlight: "EK0110",  arrivalTime: "10:40", departureTime: "20:25" },
+  { name: "Atheeqe Ansari",            chapter: "YPO Dubai Downtown Integrated",       role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK0109", departureFlight: "EK0110", arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Mazhar Nasir",              chapter: "YPO Gold Pakistan",                   role: "CC",  checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Abdulaziz Al-Othman",       chapter: "YPO Saudi",                           role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Bashar Hussein",            chapter: "YPO Palestine Integrated",            role: "CC",  checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Shivani Arora",             chapter: "YPO Dubai Downtown Integrated",       role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "EK109",  departureFlight: "EK110",   arrivalTime: "10:40", departureTime: "20:25" },
-  { name: "Inam Qureshi",              chapter: "YPO MENA Gulf Regional Integrated",   role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "AC5711", departureFlight: "AC5757",  arrivalTime: "14:50", departureTime: "10:15" },
-  { name: "Nishant Sahney",            chapter: "YPO Olive MENA Regional Integrated",  role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK109",  departureFlight: "EK110",   arrivalTime: "10:40", departureTime: "20:25" },
+  { name: "Shivani Arora",             chapter: "YPO Dubai Downtown Integrated",       role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "EK109",  departureFlight: "EK110",  arrivalTime: "10:40", departureTime: "20:25" },
+  { name: "Inam Qureshi",              chapter: "YPO MENA Gulf Regional Integrated",   role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "AC5711", departureFlight: "AC5757", arrivalTime: "14:50", departureTime: "10:15" },
+  { name: "Nishant Sahney",            chapter: "YPO Olive MENA Regional Integrated",  role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK109",  departureFlight: "EK110",  arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Jad Ellawn",                chapter: "YPO Dubai Integrated",                role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Cynthia Haddad Abou Khater", chapter: "YPO Lebanon",                       role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "ME271",  departureFlight: "ME282",   arrivalTime: "09:10", departureTime: "19:25" },
-  { name: "Tahar Ktari",               chapter: "YPO Tunisia Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "LH4304", departureFlight: "LH4573",  arrivalTime: "18:50", departureTime: "03:05" },
+  { name: "Cynthia Haddad Abou Khater", chapter: "YPO Lebanon",                       role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "ME271",  departureFlight: "ME282",  arrivalTime: "09:10", departureTime: "19:25" },
+  { name: "Tahar Ktari",               chapter: "YPO Tunisia Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "LH4304", departureFlight: "LH4573", arrivalTime: "18:50", departureTime: "03:05" },
   { name: "Shamsh Hadi",               chapter: "YPO Dubai Downtown Integrated",       role: "SP",  checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Elias Chabtini",            chapter: "YPO Emirates Integrated",             role: "RC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Katrina Mankani",           chapter: "YPO Dubai Integrated",                role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK109",  departureFlight: "EK110",   arrivalTime: "10:40", departureTime: "20:25" },
+  { name: "Katrina Mankani",           chapter: "YPO Dubai Integrated",                role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK109",  departureFlight: "EK110",  arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Abather Al Juboori",        chapter: "YPO Iraq Integrated",                 role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Moodi Ali Shah Bukhari",    chapter: "YPO Capital Pakistan Integrated",     role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "Emirates", departureFlight: "Emirates", arrivalTime: "TBC", departureTime: "TBC" },
   { name: "Adriana Usvat",             chapter: "YPO UAE Integrated",                  role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Sarah Abudawood",           chapter: "YPO Khaleej Integrated",              role: "REX", checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                         role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "Me261",  departureFlight: "Me262",   arrivalTime: "21:40", departureTime: "22:25" },
+  { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                         role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "Me261",  departureFlight: "Me262",  arrivalTime: "21:40", departureTime: "22:25" },
   { name: "Harvinder Sahni",           chapter: "YPO Kuwait Integrated",               role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ139",  departureFlight: "RJ140",   arrivalTime: "11:15", departureTime: "23:59" },
+  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ139",  departureFlight: "RJ140",  arrivalTime: "11:15", departureTime: "23:59" },
 ];
 
 const ROLE_LABELS = {
@@ -211,7 +215,7 @@ export default function RBMRegistrations() {
       </div>
       {/* Date bar */}
       <div style={{ background: "#f0f2f5", padding: "6px 24px", fontSize: 11, color: "#444", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <span>Data accurate as of <strong style={{ color: ORANGE }}>03/06/2026</strong></span>
+        <span>Data accurate as of <strong style={{ color: ORANGE }}>04/06/2026</strong></span>
       </div>
 
       {/* Tab Nav */}
