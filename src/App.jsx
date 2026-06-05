@@ -87,7 +87,7 @@ const REGISTRANTS = [
   { name: "Harvinder Sahni",           chapter: "YPO Kuwait Integrated",               role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },,
-  { name: "Nouar Qutob",               chapter: "YPO Palestine Integrated",            role: "CC",  checkIn: "25 Jun", checkOut: "29 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null }
+  { name: "Nouar Qutob",               chapter: "YPO Palestine Integrated",            role: "SP",  checkIn: "25 Jun", checkOut: "29 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null }
 ];
 
 const ROLE_LABELS = {
