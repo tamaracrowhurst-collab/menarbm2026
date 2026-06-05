@@ -46,7 +46,7 @@ const REGISTRANTS = [
   { name: "Hari Chereddi",             chapter: "YPO MENA Gulf Regional Integrated",   role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "British Airways BA-704", departureFlight: "Emirates EK-110", arrivalTime: "13:40", departureTime: "20:25" },
   { name: "Amit Gandhi",               chapter: "YPO Emirates Integrated",             role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Zaid Midani",               chapter: "YPO Levant Integrated",               role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Sharjeel Azhar",            chapter: "YPO Bahrain Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
+  { name: "Sharjeel Azhar",            chapter: "YPO Bahrain Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Nadim Samara",              chapter: "YPO Emirates Integrated",             role: "CC",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "EK0109", departureFlight: "EK0110", arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Mark Andrews",              chapter: "Other*",                              role: "MA",  checkIn: "25 Jun", checkOut: "29 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Maria Luz Domingo",         chapter: "Other*",                              role: "MA",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
@@ -86,7 +86,8 @@ const REGISTRANTS = [
   { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                         role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "Me261",  departureFlight: "Me262",  arrivalTime: "21:40", departureTime: "22:25" },
   { name: "Harvinder Sahni",           chapter: "YPO Kuwait Integrated",               role: "CC",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },
+  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },,
+  { name: "Nouar Qutob",               chapter: "YPO Palestine Integrated",            role: "CC",  checkIn: "25 Jun", checkOut: "29 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null }
 ];
 
 const ROLE_LABELS = {
