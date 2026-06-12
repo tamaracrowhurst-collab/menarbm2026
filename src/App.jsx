@@ -53,7 +53,7 @@ const REGISTRANTS = [
   { name: "Nuha Abujaber",             chapter: "YPO Jordan Integrated",               role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Sabina Hadi",               chapter: "YPO Dubai Downtown Integrated",       role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "EK 109", departureFlight: "EK 0110", arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Mohamed Al Harthy",         chapter: "YPO Oman Integrated",                 role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Jana Yamani",               chapter: "YPO Saudi",                           role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "MS741", departureFlight: "MA742", arrivalTime: "06:30", departureTime: "06:30" },
+  { name: "Jana Yamani",               chapter: "YPO Saudi",                           role: "REX", checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: "Ms741", departureFlight: "Ma742", arrivalTime: "06:30", departureTime: "06:30" },
   { name: "Hachem Ghandour",           chapter: "YPO Emirates Integrated",             role: "REX", checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Mostafa Bedair",            chapter: "YPO Cairo Integrated",                role: "CC",  checkIn: "25 Jun",     checkOut: "28 Jun",     withSpouse: false, arrivalFlight: "MS741", departureFlight: "MS744", arrivalTime: "18:30", departureTime: "12:15" },
   { name: "Nissa Bukhari",             chapter: "YPO Capital Pakistan Integrated",     role: "SP",  checkIn: null,     checkOut: null,     withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
@@ -86,8 +86,9 @@ const REGISTRANTS = [
   { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                         role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "Me261",  departureFlight: "Me262",  arrivalTime: "21:40", departureTime: "22:25" },
   { name: "Harvinder Sahni",           chapter: "YPO Kuwait Integrated",               role: "CC",  checkIn: "25 Jun",     checkOut: "28 Jun",     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
-  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },,
+  { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },
   { name: "Wael Sinno",               chapter: "YPO Gold Lebanon",                         role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "ME 0271", departureFlight: "ME 0282", arrivalTime: "09:10", departureTime: "19:25" },
+  { name: "Christopher Rose",          chapter: "YPO Dubai Downtown Integrated",       role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Mazin Almoallim",          chapter: "YPO Gold Saudi",                      role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "QR265",  departureFlight: "QR266",  arrivalTime: "12:05", departureTime: "13:35" },
   { name: "Yacine El Jamali",         chapter: "YPO Morocco Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Nouar Qutob",               chapter: "YPO Palestine Integrated",            role: "SP",  checkIn: "25 Jun", checkOut: "29 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null }
@@ -173,7 +174,7 @@ function Badge({ name, role }) {
 
 export default function RBMRegistrations() {
   const [activeTab, setActiveTab] = useState("registrations");
-  const FLIGHT_NAMES = new Set(["Atheeqe Ansari","Dayala Dagher Hayeck","Moodi Ali Shah Bukhari","Tahar Ktari","Ali Alam Qamar","Katrina Mankani","Nishant Sahney","Helen Bannayan","Shivani Arora","Inam Qureshi","Cynthia Haddad Abou Khater","Adriana Usvat","Mostafa Bedair","Owais Lakhani","Sarah Abudawood","Nadim Samara","Nishant Vora","Hari Chereddi","Jad Ellawn","Sharjeel Azhar","Sabina Hadi","Mark Troy","Amit Gandhi","Elias Chabtini","Hachem Ghandour","Jana Yamani","Wael Sinno","Amit Gandhi","Sabina Hadi","Mark Troy","Hachem Ghandour","Abdulaziz Al-Othman","Paige Morgan","Lauren Aird","Maria Luz Domingo","Zaid Midani","Nadim Samara","Wael Sinno","Yacine El Jamali","Mazin Almoallim","Bilal Shahid Ansari","Bashar Hussein","Nishant Vora","Abather Al Juboori","Shamsh Hadi"]);
+  const FLIGHT_NAMES = new Set(["Abather Al Juboori", "Abdulaziz Al-Othman", "Adriana Usvat", "Ali Alam Qamar", "Amit Gandhi", "Atheeqe Ansari", "Bashar Hussein", "Bilal Shahid Ansari", "Cynthia Haddad Abou Khater", "Dayala Dagher Hayeck", "Hari Chereddi", "Helen Bannayan", "Inam Qureshi", "Jad Ellawn", "Jana Yamani", "Katrina Mankani", "Lauren Aird", "Maria Luz Domingo", "Mazin Almoallim", "Moodi Ali Shah Bukhari", "Mostafa Bedair", "Nadim Samara", "Nishant Sahney", "Nishant Vora", "Owais Lakhani", "Paige Morgan", "Sabina Hadi", "Sarah Abudawood", "Shamsh Hadi", "Sharjeel Azhar", "Shivani Arora", "Tahar Ktari", "Wael Sinno", "Zaid Midani","Mark Troy","Hachem Ghandour"]);
   const [selectedChapter, setSelectedChapter] = useState("All");
   const ROLE_ORDER = ["CC", "RC", "REX", "FO", "MEO", "YNG", "MA"];
   const dataByChapter = {};
@@ -222,7 +223,7 @@ export default function RBMRegistrations() {
       </div>
       {/* Date bar */}
       <div style={{ background: "#f0f2f5", padding: "6px 24px", fontSize: 11, color: "#444", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <span>Data accurate as of <strong style={{ color: ORANGE }}>10/06/2026</strong></span>
+        <span>Data accurate as of <strong style={{ color: ORANGE }}>12/06/2026</strong></span>
       </div>
 
       {/* Tab Nav */}
