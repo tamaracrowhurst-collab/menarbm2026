@@ -88,7 +88,7 @@ const REGISTRANTS = [
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: null,     checkOut: null,     withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },
   { name: "Wael Sinno",               chapter: "YPO Gold Lebanon",                         role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "ME 0271", departureFlight: "ME 0282", arrivalTime: "09:10", departureTime: "19:25" },
-  { name: "Christopher Rose",          chapter: "YPO Dubai Downtown Integrated",       role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
+  { name: "Christopher Rose",          chapter: "YPO Dubai Downtown Integrated",       role: "GCC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Mazin Almoallim",          chapter: "YPO Gold Saudi",                      role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "QR265",  departureFlight: "QR266",  arrivalTime: "12:05", departureTime: "13:35" },
   { name: "Yacine El Jamali",         chapter: "YPO Morocco Integrated",              role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Nouar Qutob",               chapter: "YPO Palestine Integrated",            role: "SP",  checkIn: "25 Jun", checkOut: "29 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null }
@@ -102,6 +102,7 @@ const ROLE_LABELS = {
   YNG: "YNG",
   MA:  "YPO Mgmt Associate",
   SP:  "Spouse / Partner",
+  GCC: "Committee Chair, GCC",
 };
 
 const ROLE_COLORS = {
@@ -112,6 +113,7 @@ const ROLE_COLORS = {
   YNG: { bg: "#00838F", text: "#fff" },
   MA:  { bg: "#555555", text: "#fff" },
   SP:  { bg: "#AD1457", text: "#fff" },
+  GCC: { bg: "#1B5E20", text: "#fff" },
 };
 
 function Badge({ name, role }) {
