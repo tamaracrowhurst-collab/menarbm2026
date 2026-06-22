@@ -85,7 +85,6 @@ const REGISTRANTS = [
   { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                         role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "Me261",  departureFlight: "Me262",  arrivalTime: "21:40", departureTime: "22:25" },
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: "24 Jun",     checkOut: "28 Jun",     withSpouse: false, arrivalFlight: "EK109", departureFlight: "EK110", arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },
-  { name: "Wael Sinno",               chapter: "YPO Gold Lebanon",                         role: "CC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "ME 0271", departureFlight: "ME 0282", arrivalTime: "09:10", departureTime: "19:25" },
   { name: "Omar Bastaki",            chapter: "YPO UAE Integrated",                  role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Atiya Nasir",              chapter: "YPO Gold Pakistan",                   role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Amer Abbas",               chapter: "YPO Qatar Integrated",               role: "MEO", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
@@ -176,9 +175,6 @@ function Badge({ name, role }) {
 }
 
 export default function RBMRegistrations() {
-  const [activeTab, setActiveTab] = useState("registrations");
-  const FLIGHT_NAMES = new Set(["Abather Al Juboori", "Abdulaziz Al-Othman", "Adriana Usvat", "Ali Alam Qamar", "Amit Gandhi", "Atheeqe Ansari", "Bashar Hussein", "Bilal Shahid Ansari", "Christopher Rose", "Cynthia Haddad Abou Khater", "Dayala Dagher Hayeck", "Elias Chabtini", "Hachem Ghandour", "Hari Chereddi", "Helen Bannayan", "Inam Qureshi", "Jad Ellawn", "Jana Yamani", "Katrina Mankani", "Lauren Aird", "Maria Luz Domingo", "Mark Troy", "Mazin Almoallim", "Moodi Ali Shah Bukhari", "Mostafa Bedair", "Nadim Samara", "Nishant Sahney", "Nishant Vora", "Owais Lakhani", "Paige Morgan", "Sabina Hadi", "Sarah Abudawood", "Shamsh Hadi", "Sharjeel Azhar", "Shivani Arora", "Tahar Ktari", "Wael Sinno", "Yacine El Jamali", "Zaid Midani"]);
-  const [selectedChapter, setSelectedChapter] = useState("All");
   const ROLE_ORDER = ["CC", "RC", "REX", "FO", "MEO", "YNG", "MA"];
   const dataByChapter = {};
   CHAPTERS.forEach(ch => dataByChapter[ch] = []);
@@ -229,23 +225,8 @@ export default function RBMRegistrations() {
         <span>Data accurate as of <strong style={{ color: ORANGE }}>18/06/2026</strong></span>
       </div>
 
-      {/* Tab Nav */}
-      <div style={{ display: "flex", borderBottom: "2px solid #e0e0e0", background: "#fff", padding: "0 24px" }}>
-        {["registrations", "checkin"].map(tab => (
-          <button key={tab} onClick={() => setActiveTab(tab)} style={{
-            padding: "10px 20px", fontSize: 12, fontWeight: 600, cursor: "pointer",
-            border: "none", background: "none", fontFamily: "Arial, sans-serif",
-            borderBottom: activeTab === tab ? `3px solid ${ORANGE}` : "3px solid transparent",
-            color: activeTab === tab ? ORANGE : "#666",
-            marginBottom: -2,
-          }}>
-            {tab === "registrations" ? "Registrations" : "Arrivals / Departures"}
-          </button>
-        ))}
-      </div>
-
       {/* Registrations Tab */}
-      {activeTab === "registrations" && <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
+      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
         <thead>
           <tr>
             <th style={{
@@ -328,76 +309,12 @@ export default function RBMRegistrations() {
             </td>
           </tr>
         </tbody>
-      </table>}
+      </table>
 
       {/* Footer */
       <div style={{ fontSize: 11, color: "#666", padding: "7px 24px", borderTop: "1px solid #e0e0e0" }}>
         Cyprus RBM &nbsp;·&nbsp; June 25–28, 2026 &nbsp;·&nbsp; * Other = guests from other Chapters / Regions
       </div>}
-
-      {/* Check-in / Check-out Tab */}
-      {activeTab === "checkin" && (
-        <div>
-        <div style={{ padding: "10px 24px", background: "#f0f2f5", display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: 11, color: "#444", fontWeight: 600 }}>Filter by Chapter:</span>
-          <select
-            value={selectedChapter}
-            onChange={e => setSelectedChapter(e.target.value)}
-            style={{
-              fontSize: 11, padding: "5px 10px", borderRadius: 4,
-              border: "1px solid #ccc", background: "#fff", color: "#1a1a1a",
-              cursor: "pointer", fontFamily: "Arial, sans-serif",
-            }}
-          >
-            <option value="All">All Chapters</option>
-            {[...new Set(REGISTRANTS.filter(p => p.role !== "MA" && p.name !== "Nissa Bukhari" && p.name !== "Shamsh Hadi").map(p => p.chapter))].sort().map(ch => (
-              <option key={ch} value={ch}>{ch}</option>
-            ))}
-          </select>
-          {selectedChapter !== "All" && (
-            <button onClick={() => setSelectedChapter("All")} style={{
-              fontSize: 11, padding: "5px 10px", borderRadius: 4,
-              border: "1px solid #ccc", background: "#fff", color: "#666",
-              cursor: "pointer", fontFamily: "Arial, sans-serif",
-            }}>✕ Clear</button>
-          )}
-        </div>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
-          <thead>
-            <tr>
-              <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "left", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "28%" }}>Chapter</th>
-              <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "left", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "28%" }}>Name</th>
-              <th style={{ background: NAVY, color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "10%" }}>Role</th>
-              <th style={{ background: ORANGE, color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "12%" }}>Check-in</th>
-              <th style={{ background: ORANGE, color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, borderRight: "1px solid rgba(255,255,255,0.15)", width: "12%" }}>Check-out</th>
-              <th style={{ background: "#AD1457", color: "#fff", padding: "8px 16px", textAlign: "center", fontSize: 11, fontWeight: 600, width: "8%" }}>+SP</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[...REGISTRANTS.filter(p => p.role !== "MA" && p.role !== "SP" && (selectedChapter === "All" || p.chapter === selectedChapter))].sort((a, b) => a.chapter.localeCompare(b.chapter) || a.name.localeCompare(b.name)).map((p, i) => (
-              <tr key={i} style={{ background: FLIGHT_NAMES.has(p.name) ? "#E8F5E9" : i % 2 === 0 ? "#fff" : "#f7f8fa" }}>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", fontWeight: 500, color: "#1a1a1a" }}>{p.chapter}</td>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", color: "#444" }}>{p.name}</td>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", textAlign: "center" }}>
-                  <span style={{ background: ROLE_COLORS[p.role]?.bg || "#555", color: "#fff", borderRadius: 3, padding: "2px 7px", fontSize: 11, fontWeight: 700 }}>{p.role}</span>
-                </td>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", textAlign: "center", color: p.checkIn ? "#1a1a1a" : "#ccc", fontWeight: p.checkIn ? 500 : 400 }}>
-                  {p.checkIn || "—"}
-                </td>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", textAlign: "center", color: p.checkOut ? "#1a1a1a" : "#ccc", fontWeight: p.checkOut ? 500 : 400 }}>
-                  {p.checkOut || "—"}
-                </td>
-                <td style={{ padding: "7px 16px", borderBottom: "1px solid #e8e8e8", textAlign: "center" }}>
-                  {p.withSpouse
-                    ? <span style={{ background: "#AD1457", color: "#fff", borderRadius: 3, padding: "2px 8px", fontSize: 11, fontWeight: 700 }}>Yes</span>
-                    : <span style={{ color: "#ccc" }}>—</span>}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        </div>
-      )}
 
       <div style={{ fontSize: 11, color: "#666", padding: "7px 24px", borderTop: "1px solid #e0e0e0" }}>
         Cyprus RBM &nbsp;·&nbsp; June 25–28, 2026 &nbsp;·&nbsp; * Other = guests from other Chapters / Regions
