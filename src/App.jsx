@@ -85,6 +85,8 @@ const REGISTRANTS = [
   { name: "Dayala Dagher Hayeck",      chapter: "YPO Lebanon",                         role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: "Me261",  departureFlight: "Me262",  arrivalTime: "21:40", departureTime: "22:25" },
   { name: "Tamara Crowhurst",          chapter: "Other*",                              role: "MA",  checkIn: "24 Jun",     checkOut: "28 Jun",     withSpouse: false, arrivalFlight: "EK109", departureFlight: "EK110", arrivalTime: "10:40", departureTime: "20:25" },
   { name: "Helen Bannayan",            chapter: "YPO Jordan Integrated",               role: "RC",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: false, arrivalFlight: "RJ 139",  departureFlight: "RJ 140",  arrivalTime: "11:15", departureTime: "23:59" },
+  { name: "Georges Khouri",           chapter: "YPO Gold Lebanon",                    role: "REX", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
+  { name: "Abir Khouri",               chapter: "YPO Gold Lebanon",                    role: "SP",  checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Omar Bastaki",            chapter: "YPO UAE Integrated",                  role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Atiya Nasir",              chapter: "YPO Gold Pakistan",                   role: "SP",  checkIn: "25 Jun", checkOut: "28 Jun", withSpouse: true,  arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
   { name: "Amer Abbas",               chapter: "YPO Qatar Integrated",               role: "MEO", checkIn: "25 Jun", checkOut: "27 Jun", withSpouse: false, arrivalFlight: null, departureFlight: null, arrivalTime: null, departureTime: null },
@@ -222,7 +224,7 @@ export default function RBMRegistrations() {
       </div>
       {/* Date bar */}
       <div style={{ background: "#f0f2f5", padding: "6px 24px", fontSize: 11, color: "#444", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <span>Data accurate as of <strong style={{ color: ORANGE }}>18/06/2026</strong></span>
+        <span>Data accurate as of <strong style={{ color: ORANGE }}>23/06/2026</strong></span>
       </div>
 
       {/* Registrations Tab */}
